@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/guoweidong/.vim/bundle/Vundle.vim'
+let g:netrw_dirhist_2='/Users/guoweidong/workspace/magnet/config/deploy'
+let g:netrw_dirhist_3='/Users/guoweidong/workspace/magnet/bin'
+let g:netrw_dirhist_4='/Users/guoweidong/workspace/magnet/config/deploy'
