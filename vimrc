@@ -71,62 +71,65 @@ let maplocalleader = ","
 "  autocmd Filetype java setlocal omnifunc=javacomplete#Complete
 "endif
 
+" ============== Vundle Config =================
 
-set nocompatible               " be iMproved
-filetype off                   " required!
-
-
-
-
+set nocompatible               " be iMproved 去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限
 " ============== Vundle part =================
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
 
-" let Vundle manage Vundle
-" required!
-Bundle 'gmarik/vundle'
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" " alternatively, pass a path where Vundle should install plugins
+" "call vundle#begin('~/some/path/here')
+"
+" " let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+
+
+Plugin 'gmarik/vundle'
+" Brief help
+" :BundleList
+" :BundleInstall
+" :BundleSearch
+" :BundleClean
 
 " My Bundles here:
 "
 " original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-"Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'tpope/vim-rails.git'
-Bundle 'tsaleh/vim-matchit.git'
-Bundle 'ecomba/vim-ruby-refactoring.git'
-
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'tpope/vim-rails.git'
+Plugin 'tsaleh/vim-matchit.git'
+Plugin 'ecomba/vim-ruby-refactoring.git'
 " vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
+Plugin 'L9'
+Plugin 'FuzzyFinder'
+Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'YankRing.vim'
+Plugin 'vividchalk.vim'
+Plugin 'The-NERD-Commenter'
+Plugin 'The-NERD-tree'
+Plugin 'mru.vim'
+Plugin 'greplace.vim'
+Plugin 'rking/ag.vim'
+Plugin 'slim-template/vim-slim'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'godlygeek/tabular'
+Plugin 'gabrielelana/vim-markdown'
+Plugin 'kchmck/vim-coffee-script'
 
-Bundle 'git://git.wincent.com/command-t.git'
-"Bundle 'snipMate'
-"Bundle 'snipmate-snippets'
-"Bundle 'Jasmine-snippets-for-snipMate'
-Bundle 'YankRing.vim'
-Bundle 'vividchalk.vim'
-Bundle 'The-NERD-Commenter'
-Bundle 'The-NERD-tree'
-Bundle 'kchmck/vim-coffee-script'
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
 
 colorscheme vividchalk
 set background=light
 set background=dark
-Bundle 'mru.vim'
-Bundle 'greplace.vim'
 
 filetype plugin indent on     " required!
-"
-" Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
 
+" ============== Vundle Config =================
 
 map <S-F> <Leader><Leader>f
 map <Leader>a :YRShow<CR>
@@ -135,11 +138,5 @@ map <Leader>q :q<CR>
 map <Leader>f :Rfixture<CR>
 map <Leader>rj :Rjavascript<CR>
 
-"autocmd BufWritePost,FileWritePost *.coffee :silent !coffee --compile --join appstore/static/javascripts/angular/controllers.js appstore/static/javascripts/angular/controllers.coffee appstore/static/javascripts/angular/tabs/*coffee appstore/static/javascripts/angular/applications/*coffee appstore/static/javascripts/angular/users/*coffee appstore/static/javascripts/angular/commons/*coffee
-"autocmd BufWritePost,FileWritePost *.coffee :silent !coffee --compile appstore/static/javascripts/angular/app.coffee appstore/static/javascripts/angular/directives.coffee appstore/static/javascripts/angular/filters.coffee appstore/static/javascripts/angular/services.coffee
-
-"autocmd BufWritePost,FileWritePost *.coffee :silent !coffee --compile --join tvboxcms/static/javascripts/angular/controllers.js tvboxcms/static/javascripts/angular/controllers.coffee tvboxcms/static/javascripts/angular/tabs/*coffee tvboxcms/static/javascripts/angular/applications/*coffee tvboxcms/static/javascripts/angular/users/*coffee tvboxcms/static/javascripts/angular/commons/*coffee
-"autocmd BufWritePost,FileWritePost *.coffee :silent !coffee --compile tvboxcms/static/javascripts/angular/app.coffee tvboxcms/static/javascripts/angular/directives.coffee tvboxcms/static/javascripts/angular/filters.coffee tvboxcms/static/javascripts/angular/services.coffee
-
-"autocmd BufWritePost,FileWritePost *.coffee :silent !coffee --compile --join m-cms-preview/static/javascripts/angular/controllers.js m-cms-preview/static/javascripts/angular/controllers.coffee m-cms-preview/static/javascripts/angular/tabs/*coffee m-cms-preview/static/javascripts/angular/applications/*coffee m-cms-preview/static/javascripts/angular/users/*coffee m-cms-preview/static/javascripts/angular/commons/*coffee
-"autocmd BufWritePost,FileWritePost *.coffee :silent !coffee --compile m-cms-preview/static/javascripts/angular/app.coffee m-cms-preview/static/javascripts/angular/directives.coffee m-cms-preview/static/javascripts/angular/filters.coffee m-cms-preview/static/javascripts/angular/services.coffee
+"autocmd BufEnter * cd %:p:h
+autocmd Filetype gitcommit setlocal spell textwidth=72
