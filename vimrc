@@ -140,3 +140,5 @@ map <Leader>rj :Rjavascript<CR>
 
 "autocmd BufEnter * cd %:p:h
 autocmd Filetype gitcommit setlocal spell textwidth=72
+
+let g:rustfmt_autosave = 1
