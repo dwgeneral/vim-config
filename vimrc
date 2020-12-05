@@ -101,7 +101,6 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'tpope/vim-rails.git'
-Plugin 'tsaleh/vim-matchit.git'
 Plugin 'ecomba/vim-ruby-refactoring.git'
 " vim-scripts repos
 Plugin 'L9'
@@ -115,10 +114,11 @@ Plugin 'mru.vim'
 Plugin 'greplace.vim'
 Plugin 'rking/ag.vim'
 Plugin 'slim-template/vim-slim'
-Plugin 'elixir-lang/vim-elixir'
 Plugin 'godlygeek/tabular'
 Plugin 'gabrielelana/vim-markdown'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'eslint/eslint'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
