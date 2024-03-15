@@ -1,16 +1,25 @@
-# dwgeneral-vim
-vim config
-clone to your location, and change vimrc -> .vimrc, vim/ -> .vim/ to locate home directory ,  that's all ! enjoy Vim !
+# Introduce
+If you're a vim-er, you may need to install some vim-plugins to use vim easily, this repo have collected the most famous and useful plugins, let you install them at once.
 
-## Introduce
+some plugins we have:
+- Vundle.vim
+- ctrlp.vim
+- L9
+- FuzzyFinder
+- vividchalk.vim
+- The-NERD-tree
+- greplace.vim
+and so on.
+
+## Summary
 vim config file and bundled plugins.
 shortcuts is ready to help development.
 
-## shortcuts
+## Shortcuts
 ,t -> NerdTreee
 
 
-## usage
+## Usage
 1. clone to your location
 2. rename vimrc to ~/.vimrc
 3. rename vim folder to ~/.vim folder
